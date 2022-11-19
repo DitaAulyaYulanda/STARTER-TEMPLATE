@@ -318,13 +318,13 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
         [
             'text' => 'Buku',
-            'url'  => 'admin/settings',
+            'url' => 'admin/books',
             'icon' => 'fas fa-fw fa-book',
-            
+            'can' => 'isadmin',
         ],
+        ['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
