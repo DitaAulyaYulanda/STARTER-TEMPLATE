@@ -174,6 +174,8 @@
 
         let baseurl = "<?url('/')?>";
         let fullURL = "<?url()->full()?>";
+
+       
         </script>
 
 </body>
