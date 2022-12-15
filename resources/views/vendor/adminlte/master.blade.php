@@ -73,7 +73,7 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     @endif
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>
@@ -106,7 +106,8 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script>
         const Toast = Swal.mixin({
             toast: true,
@@ -172,12 +173,11 @@
         @endif
         $('#table-data').DataTable();
 
-        let baseurl = "<?url('/')?>";
-        let fullURL = "<?url()->full()?>";
+        let baseurl = "<?=url('/')?>";
+        let fullURL = "<?=url()->full()?>";
 
        
         </script>
-
 </body>
 
 </html>
